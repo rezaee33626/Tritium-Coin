@@ -1,9 +1,7 @@
 <h1 align="center">
-   <p>'||''|.     ..|'''.| '|.   '|' 
- ||   ||  .|'     '   |'|   |  
- ||    || ||          | '|. |  
- ||    || '|.      .  |   |||  
-.||...|'   ''|....'  .|.   '|  </p>
+   <p>
+        <b>DCN CRYPTO</b>
+    </p>
 </h1>
 <p align="center">    
     <a href="https://discord.com/invite/3b4PRyGSsQ">
