@@ -4,17 +4,15 @@ const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
 const { Keygens } = require('./keyGenerator');
 
-// Replace with the actual server IP and port
 const serverUrl = 'http://localhost:3000';
 
 const key = ec.genKeyPair();
 const publicKey = key.getPublic('hex');
 const privateKey = key.getPrivate('hex');
-// Replace the private key with your own private key
+
 const myKey = ec.keyFromPrivate(privateKey);
 const myWalletAddress = myKey.getPublic('hex');
 
-// Function to create a new transaction
 async function createTransaction(toAddress, amount) {
   try {
     const response = await axios.post(`${serverUrl}/createTransaction`, {
@@ -28,7 +26,6 @@ async function createTransaction(toAddress, amount) {
   }
 }
 
-// Function to mine a new block
 async function mineBlock() {
     while(true){
         try {
@@ -37,7 +34,6 @@ async function mineBlock() {
             });
             console.log(response.data.message);
         
-            // Display balance after mining
             getBalance();
         } 
         catch (error) {
@@ -46,7 +42,6 @@ async function mineBlock() {
     }
 }
 
-// Function to get the balance of the wallet address
 async function getBalance() {
   try {
     const response = await axios.get(`${serverUrl}/getBalance/${myWalletAddress}`);
@@ -60,15 +55,11 @@ function printCentered(text) {
   const columns = process.stdout.columns;
   const spaces = Math.floor((columns - text.length) / 2);
 
-  // Add spaces to center the text
   const centeredText = ' '.repeat(spaces) + text;
 
   console.log(centeredText);
 }
 
-// Example usage:
-// createTransaction('recipient_public_key_goes_here', 10);
-// mineBlock();
 console.clear();
 printCentered('\u001b[38;5;22m'+'                 +=========='+'\u001b[38;5;28m'+'=================='+'\u001b[38;5;34m'+'==================+');
 printCentered('\u001b[38;5;17m'+'                            DC'+'\u001b[38;5;18m'+'N MI'+'\u001b[38;5;19m'+'NE'+'\u001b[38;5;20m'+'R');
