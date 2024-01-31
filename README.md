@@ -28,4 +28,4 @@ Coming soon...
 
 ## License
 DCN is distributed under the MIT License.
-[COPYING](https://github.com/rezaee33626/DragonCoin/blob/main/LICENSE) for more information or see
+[COPYING](https://github.com/rezaee33626/DragonCoin/blob/main/LICENSE) for more information or see.

@@ -6,7 +6,7 @@ class Blockchain {
 
   constructor() {
     this.chain = [this.createGenesisBlock()];
-    this.difficulty = 6; 
+    this.difficulty = 5; 
     this.pendigTransactions = [];
     this.miningReward= 0.000000001;
   }
