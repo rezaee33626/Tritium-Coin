@@ -15,10 +15,10 @@
 ## Getting started
 
 ### Information
-this crypto is a first model of crypto security with best anti attacks.
-this security designed by 2 liers of security to protect the wallets and nodes and it's have best feature.
+This crypto is a first model of crypto security with best anti attacks.
+This security designed by 2 liers of security to protect the wallets and nodes and it's have best feature.
 You can change your arduino to miners and mine DCN with arduino but it's very slow because it's have high difficulty and
-we use sha256 algorithm system. The next feature is automatic power control. It can help you use the power with low energy 
+We use sha256 algorithm system. The next feature is automatic power control. It can help you use the power with low energy 
 to mine it.
 
 ### Usage 
