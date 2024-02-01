@@ -22,7 +22,9 @@ async function createTransaction(toAddress, amount) {
     });
     console.log(response.data.message);
   } catch (error) {
-    console.error('Error creating transaction:', error.message);
+    console.error('\u001b[38;5;88m'+'Error creating transaction:', error.message);
+    console.log('\u001b[0m');
+    process.exit(0);
   }
 }
 
@@ -37,7 +39,9 @@ async function mineBlock() {
             getBalance();
         } 
         catch (error) {
-            console.error('Error mining block:', error.message);
+            console.error('\u001b[38;5;88m'+'Error mining block:', error.message);
+            console.log('\u001b[0m');
+            process.exit(0);
         }
     }
 }
@@ -47,7 +51,9 @@ async function getBalance() {
     const response = await axios.get(`${serverUrl}/getBalance/${myWalletAddress}`);
     console.log(`Balance of My Wallet: ${response.data.balance}`);
   } catch (error) {
-    console.error('Error getting balance:', error.message);
+    console.error('\u001b[38;5;88m'+'Error getting balance:', error.message);
+    console.log('\u001b[0m');
+    process.exit(0);
   }
 }
 
@@ -61,10 +67,19 @@ function printCentered(text) {
 }
 
 console.clear();
-printCentered('\u001b[38;5;22m'+'                 +=========='+'\u001b[38;5;28m'+'=================='+'\u001b[38;5;34m'+'==================+');
-printCentered('\u001b[38;5;17m'+'                            DC'+'\u001b[38;5;18m'+'N MI'+'\u001b[38;5;19m'+'NE'+'\u001b[38;5;20m'+'R');
-printCentered('\u001b[38;5;17m'+'developed by rezaee34');
-printCentered('\u001b[38;5;22m'+'                 +=========='+'\u001b[38;5;28m'+'=================='+'\u001b[38;5;34m'+'==================+');
+printCentered('\u001b[38;5;34m'+'                 +=================='+'\u001b[38;5;35m'+'=================='+'\u001b[38;5;36m'+'==================+');
+printCentered(' ');
+printCentered('\u001b[38;5;34m'+'    _/_/_/      _/_/_/  _/      _/   ');
+printCentered('\u001b[38;5;35m'+'   _/    _/  _/        _/_/    _/    ');
+printCentered('\u001b[38;5;36m'+'  _/    _/  _/        _/  _/  _/     ');
+printCentered('\u001b[38;5;37m'+' _/    _/  _/        _/    _/_/      ');
+printCentered('\u001b[38;5;38m'+'_/_/_/      _/_/_/  _/      _/       ');
+printCentered(' ');
+printCentered('\u001b[38;5;34m'+'                                   deve'+'\u001b[38;5;35m'+'lope'+'\u001b[38;5;36m'+'d by '+'\u001b[38;5;37m'+'reza'+'\u001b[38;5;38m'+'ee34');
+printCentered(' ');
+printCentered('\u001b[38;5;34m'+'                 +=================='+'\u001b[38;5;35m'+'=================='+'\u001b[38;5;36m'+'==================+');
 console.log('\u001b[0m');
+console.log(' ');
+
 
 mineBlock();

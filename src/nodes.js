@@ -1,9 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { Blockchain, Transaction } = require('./blockchain');
+const helmet = require('helmet');
+const { Blockchain } = require('./blockchain');
+const { Transaction } = require('./transactions');
 
 const app = express();
 const port = 3000;
+
+function security(){
+  app.use(helmet({
+    xXssProtection: true
+  }));
+}
 
 app.use(bodyParser.json());
 
@@ -34,5 +42,8 @@ app.get('/getBalance/:address', (req, res) => {
 });
 
 app.listen(port, () => {
+  console.clear();
   console.log(`Server running on http://localhost:${port}`);
 });
+
+security();
