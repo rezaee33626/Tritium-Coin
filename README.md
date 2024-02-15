@@ -1,6 +1,6 @@
 <h1 align="center">
    <p>
-        <b>DCN CRYPTO</b>
+        <b>TRC CRYPTO</b>
     </p>
 </h1>
 <p align="center">    
