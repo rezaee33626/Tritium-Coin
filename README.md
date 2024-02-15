@@ -19,7 +19,7 @@
 ### Information
 This crypto is a first model of crypto security with best anti attacks.
 This security designed by 2 liers of security to protect the wallets and nodes and it's have best feature.
-You can change your arduino to miners and mine DCN with arduino but it's very slow because it's have high difficulty and
+You can change your arduino to miners and mine TRC with arduino but it's very slow because it's have high difficulty and
 We use sha256 algorithm system. The next feature is automatic power control. It can help you use the power with low energy 
 to mine it.
 
@@ -29,5 +29,5 @@ This code isn't compelete and it don't have secure miner system and wallet syste
 Coming soon...
 
 ## License
-DCN is distributed under the MIT License.
+TRC is distributed under the MIT License.
 [COPYING](https://github.com/rezaee33626/DragonCoin/blob/main/LICENSE) for more information or see.
